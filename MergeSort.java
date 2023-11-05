@@ -17,4 +17,18 @@ public class MergeSort {
         System.out.println("\nAfter:");
         printArray(numbers);
     }
+
+    private void mergeSort(int[] inputArray) {
+        int inputLength = inputArray.length;
+
+        if (inputLength < 2) {
+
+            return;
+
+        }
+
+        int midIndex = inputLength / 2;
+        int[] leftHalf = new int[midIndex];
+        int[] rightHalf = new int[inputLength - midIndex];
+    }
 }
