@@ -20,13 +20,17 @@ public class QuickSort {
 
     private static void quicksort(int[] array, int lowIndex, int highIndex) {
         
+        if (lowIndex >= highIndex) {
+            return;
+        }
+
         int pivot = array[highIndex];
         
         int leftPointer = lowIndex;
         int rightPointer = highIndex;
 
         while (leftPointer < rightPointer) {
-            while (array[leftPointer] <= pivot) && leftPointer < rightPointer) {
+            while (array[leftPointer] <= pivot && leftPointer < rightPointer) {
                 leftPointer++;
                 
             }
@@ -34,7 +38,14 @@ public class QuickSort {
             while (array [rightPointer] >= pivot && leftPointer < rightPointer) {
                 rightPointer--;
             }
+
+            swap(array, leftPointer, rightPointer);
         }
+
+        swap(array, leftPointer, highIndex);
+
+        quicksort(array, lowIndex, highIndex - 1);
+        quicksort(array, leftPointer + 1, highIndex);
 
     }
 
