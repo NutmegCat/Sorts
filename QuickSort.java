@@ -18,7 +18,23 @@ public class QuickSort {
         printArray(numbers);        
     }
 
-    private static void quicksort(int[] array) {
-        quicksort(array, 0, array.length - 1);
+    private static void quicksort(int[] array, int lowIndex, int highIndex) {
+        
+        int pivot = array[highIndex];
+        
+        int leftPointer = lowIndex;
+        int rightPointer = highIndex;
+
+        while (leftPointer < rightPointer) {
+            while (array[leftPointer] <= pivot) && leftPointer < rightPointer) {
+                leftPointer++;
+                
+            }
+
+            while (array [rightPointer] >= pivot && leftPointer < rightPointer) {
+                rightPointer--;
+            }
+        }
+
     }
 }
