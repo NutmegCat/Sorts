@@ -30,5 +30,16 @@ public class MergeSort {
         int midIndex = inputLength / 2;
         int[] leftHalf = new int[midIndex];
         int[] rightHalf = new int[inputLength - midIndex];
+
+        for (int i = 0; i < midIndex; i++) {
+            leftHalf[i] = inputArray[i];
+        }
+
+        for (int i = midIndex; i < inputLength; i++) {
+            rightHalf[i - midIndex] = inputArray[i];
+        }
+
+        mergeSort(leftHalf);
+        mergeSort(rightHalf);
     }
 }
