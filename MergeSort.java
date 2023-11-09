@@ -1,5 +1,6 @@
 import java.util.Random;
 
+//! fastest
 public class MergeSort {
     public static void main(String[] args) {
         Random rand = new Random();
