@@ -22,9 +22,7 @@ public class MergeSort {
         int inputLength = inputArray.length;
 
         if (inputLength < 2) {
-
             return;
-
         }
 
         int midIndex = inputLength / 2;
@@ -45,7 +43,7 @@ public class MergeSort {
         merge(inputArray, leftHalf, rightHalf);
     }
 
-    private static void merge (int[] inputArray, int[] leftHalf, int[] rightHalf) {
+    private static void merge(int[] inputArray, int[] leftHalf, int[] rightHalf) {
         int leftSize = leftHalf.length;
         int rightSize = rightHalf.length;
 
@@ -54,10 +52,10 @@ public class MergeSort {
         while (i < leftSize && j < rightSize) {
             if (leftHalf[i] <= rightHalf[j]) {
                 inputArray[k] = leftHalf[i];
-                i++; 
+                i++;
             } else {
                 inputArray[k] = rightHalf[j];
-                j++; 
+                j++;
             }
             k++;
         }
@@ -68,7 +66,7 @@ public class MergeSort {
         }
 
         while (j < rightSize) {
-            inputArray[k] = leftHalf[j];
+            inputArray[k] = rightHalf[j];
             j++;
             k++;
         }
