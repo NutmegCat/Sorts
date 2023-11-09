@@ -18,7 +18,7 @@ public class MergeSort {
         printArray(numbers);
     }
 
-    private void mergeSort(int[] inputArray) {
+    private static void mergeSort(int[] inputArray) {
         int inputLength = inputArray.length;
 
         if (inputLength < 2) {
@@ -71,6 +71,12 @@ public class MergeSort {
             inputArray[k] = leftHalf[j];
             j++;
             k++;
+        }
+    }
+
+    private static void printArray(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
         }
     }
 }
