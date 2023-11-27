@@ -11,6 +11,7 @@ class SelectionSort {
         }
         System.out.println(Arrays.toString(numbers));
         selectionSort(numbers);
+        System.out.println(Arrays.toString(numbers));
     }
 
     private static void selectionSort(int[] numbers) {
