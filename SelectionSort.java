@@ -25,7 +25,7 @@ class SelectionSort {
                     indexOfMin = j;
                 }
             }
-            swap(numbers, i, indexOfMin)
+            swap(numbers, i, indexOfMin);
         }
     }
 
