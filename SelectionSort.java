@@ -25,6 +25,13 @@ class SelectionSort {
                     indexOfMin = j;
                 }
             }
+            swap(numbers, i, indexOfMin)
         }
+    }
+
+    private static void swap(int[] numbers, int a, int b) {
+        int temp = numbers[a];
+        numbers[a] = numbers[b];
+        numbers[b] = temp;
     }
 }
